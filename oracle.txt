@@ -1,0 +1,148 @@
+Learning
+-----------
+	Oracle Interactive session
+	DATABSAE Buffer cache
+	Redo log buffer
+	shared Pool
+	Large Pool
+	Java POOL
+	Streams deprecated now called  Golden Gate
+	SGA
+	Program Global Area
+	MEMORY_TARGET
+	ORACLE DB Run in mutl thread mode
+Oracle Background procsess - Mandatory
+--------------------------------
+PMON - Process Monitoring
+LREF -  Orchestreters the net listener
+SMON - Performs instance recovery
+DBWN -  writes modefied bufferes
+LGWR - write redo buffer
+CHKPT - Records checkpoint
+MMON
+RECO
+
+Oracle Background procsess - optional
+--------------------------------
+ARCn
+CJQ - Manages JOBQs CRON jobs
+FBDA
+SMCO
+
+
+
+
+****************************************
+
+https://localhost:5500/em/login
+
+https://github.com/sudeep0901/oracle.git
+
+using OS Authentication
+--------------
+sqlplus / as sysdba
+
+lsnrctl status
+
+pluggable database
+-------------------
+SELECT PDB_ID, PDB_NAME, STATUS FROM DBA_PDBS ORDER BY PDB_ID;
+
+alter session set "_ORACLE_SCRIPT"=true;  
+
+sqlplus /nolog
+
+connect system as sysdba
+show con_name
+
+exec dbms_xdb_config.sethttpsport(5501)
+
+ alter user SYS identified by "Manasvi@1108"
+
+select * from v$process
+
+file for oracke init file
+-----------------------------
+C:\Users\sudee\Downloads\db_home\dbs
+connect system as sysdba
+
+ show parameters
+
+show parameter spfile
+
+
+run host commands
+
+bring down server without contorlled
+----------------------------------------
+startup force
+host cls
+
+shutdown
+---------------------------
+shutdown
+
+
+help
+--------------------
+help index
+
+to mount data file
+-----------------------------
+alter database mount;
+
+
+tracing logs
+--------------------------
+
+select * from v$diag_info;
+
+alter database open;
+
+adrci to check logs
+-------------------------
+adrci
+help adrci
+
+configuring Oracle Listener
+---------------------------------
+LISTNER.ORA in ORACLE_HOME\Network\Admin
+C:\Users\sudee\Downloads\db_home\network\admin
+
+contorl listeners using listener manager utility
+---------------------------------------------------
+lsnrctl
+
+Net Manager App
+
+client 
+------------------
+TNSNAMES.ORA in TNS_ADMIN
+
+tnsping
+terminal
+lsnrctl
+NetCfg
+SQL Developer
+SQL*Plus
+Cloud control
+
+tnsping oraclesudeep
+
+
+easyconnect
+---------------------
+connect system/"password"@oraclesudeep:1521
+
+v$system_parameter
+
+to view tables spaces
+----------------------------
+
+This happens when you log in to the root container of a CDB, because tablespaces are local to PDBs.
+
+Configure EM Express at PDB level, for example:
+
+connect / as sysdba
+alter session set container=ORCLPDB;
+exec dbms_xdb_config.sethttpsport(5501)
