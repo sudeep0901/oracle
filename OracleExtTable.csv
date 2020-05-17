@@ -1,0 +1,17 @@
+﻿S.No.,Name,Description
+1,dba_temp_free_space,find free spac ein temporary Tablespace
+2,database_properties,check improt database properties
+3,dba_data_files,check size and other attrib of ORACLE Data files
+4,dba_free_space,
+5,dba_temp_files,list temp tablespace on a oracle database
+6,DBA_TABLESPACE_GROUPS,TABLESPACE Groups
+7,dba_users,database users
+8,v$session,
+9,session_privs,privileges give to user
+10,session_roles,
+11,all_tables ,To show all tables that are currently accessible by the current user
+12,user_users,Show the information of the current user:
+13,all_users,"The ALL_USERS view lists all users that visible to the current user. However, this view doesn’t describe the users."
+14,dba_role_privs ,
+15,USER_TABLES,current user tables
+16,dba_tables,all database tables
